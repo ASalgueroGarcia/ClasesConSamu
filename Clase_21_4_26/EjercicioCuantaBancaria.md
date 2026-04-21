@@ -11,6 +11,7 @@ Desarrolla una aplicación en Java que simule la gestión básica de una **cuent
 ### Clase `Titular`
 - Atributo privado: nombre del titular (`String`).
 - Constructor que reciba el nombre como parámetro.
+- Getter, Setter y toString.
 
 ### Clase `Cuenta`
 - Atributos privados: el titular de la cuenta (`Titular`) y el saldo disponible (`double`).
@@ -69,3 +70,4 @@ Cerrando aplicacion...
 
 ## Notas
 - Usa `Scanner` para leer los datos del usuario.
+- La función `toString` de `Titular` deberia devolver un String en el que ponga ` Titular: [nombre de titular] `.
