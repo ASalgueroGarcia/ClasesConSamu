@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Desarrolla una aplicación en Java dentro del paquete `ejCuentas` que simule la gestión básica de una **cuenta bancaria** a través de un menú interactivo por consola.
+Desarrolla una aplicación en Java que simule la gestión básica de una **cuenta bancaria** a través de un menú interactivo por consola.
 
 ---
 
@@ -40,16 +40,27 @@ Contiene el método `main` y gestiona la interacción con el usuario mediante un
 ## Ejemplo de ejecución
 
 ```
-Digame que quieres hacer:
+Digame que quieres hacer: 
 1: Ingresar dinero a la cuenta.
-2: Retirar dinero de la cuenta.
+2: Retirar dinero de la cuenta. 
 3: Cerrar.
 > 1
-Digame cuanto quieres ingresar:
-> 150.0
-
-Digame que quieres hacer:
-...
+Digame cuanto quieres ingresar: 
+> 150
+Se ha ingresado 150.0 a su cuenta.
+Le quedan 350.0 euros en la cuenta.
+Digame que quieres hacer: 
+1: Ingresar dinero a la cuenta.
+2: Retirar dinero de la cuenta. 
+3: Cerrar.
+> 2
+Digame cuanto quieres retirar: 
+> 30
+Le quedan 320.0 euros en la cuenta.
+Digame que quieres hacer: 
+1: Ingresar dinero a la cuenta.
+2: Retirar dinero de la cuenta. 
+3: Cerrar.
 > 3
 Cerrando aplicacion...
 ```
@@ -58,5 +69,4 @@ Cerrando aplicacion...
 
 ## Notas
 - Usa `Scanner` para leer los datos del usuario.
-- Las clases `Titular` y `Cuenta` deben estar en el mismo paquete `ejCuentas`.
-- El alumno debe detectar y corregir el error de compilación presente en el código del `main`.
+- En el caso de que el usuario meta un valor no debido, el bucle principal no acaba.
