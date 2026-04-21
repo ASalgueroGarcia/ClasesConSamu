@@ -33,7 +33,7 @@ Contiene el método `main` y gestiona la interacción con el usuario mediante un
 
 - Al iniciar, se crea automáticamente un titular llamado `"Antonio"` con un saldo inicial de **200.0 €**.
 - El menú se repite hasta que el usuario elija la opción **3**.
-- Si se introduce una opción no válida, se muestra un mensaje de error y se vuelve a mostrar el menú.
+- Si se introduce una opción no válida, se muestra un mensaje de error y el bucle no se acaba.
 
 ---
 
@@ -69,4 +69,3 @@ Cerrando aplicacion...
 
 ## Notas
 - Usa `Scanner` para leer los datos del usuario.
-- En el caso de que el usuario meta un valor no debido, el bucle principal no acaba.
