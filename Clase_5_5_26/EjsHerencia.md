@@ -10,6 +10,7 @@ Crea una clase genérica llamada `Computadora` que almecene características bá
 
 ### Requisitos
 - Atributos de `Computadora`:
+    - Computadora(tipoOs, peso) <- recibe el peso EN KILOGRAMOS
     - Sistema Operativo (enum)
         - Windows
         - Linux
@@ -17,7 +18,7 @@ Crea una clase genérica llamada `Computadora` que almecene características bá
         - Android
     - Peso (float)
 - Atributos de `Tablet`:
-    - Los mismos que en `Computadora`, pero el peso en g en vez de kg
+    - Los mismos que en `Computadora` (el constructor NO CAMBIA)
 
 ### Pistas
 Suponiendo que nosotros somos la clase C, derivada de B que está derivada de A, para poder acceder a cada X se hace asi:
@@ -33,7 +34,7 @@ super.x         // Accede a x de B (solo puede subir un nivel)
 Para acceder a la función padre de `Computadora` se hace con:
 
 ```java
-super.getPesoKg();
+super.printPeso();
 ```
 
 ### Diagrama de Herencia
@@ -41,11 +42,11 @@ super.getPesoKg();
 Computadora
   ├── sistemaOperativo : SistemaOperativo (enum)
   ├── peso : float  ← en KILOGRAMOS
-  └── getPesoKg() : float
+  └── printPeso() : float
 
 Tablet (Hereda de Computadora)
-  ├── peso : float  ← en GRAMOS (sobreescribe el atributo)
-  └── mostrarPeso() → imprime gramos y llama a super.getPesoKg() para los kg
+  ├── peso : float  ← en GRAMOS (mil veces más que el del padre)
+  └── printPeso() → imprime gramos y llama a super.printPeso() para los kg
 ```
 
 ### Ejemplo de Salida Esperado
