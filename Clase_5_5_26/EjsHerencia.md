@@ -60,6 +60,17 @@ public enum tipoOS {
 }
 ```
 
+### Main del Ejercicio
+Crea una nueva clase llamada `Main_her` y pegale esto. **NO SE MODIFICA EN ABSOLUTO.**
+```java
+public class Main_her {
+	public static void main(String[] args) {
+		Tablet tablet = new Tablet(tipoOS.Android, 0.65f);
+		
+		tablet.printPeso();
+	}
+}
+```
 
 ### Ejemplo de Salida Esperado
 ```
