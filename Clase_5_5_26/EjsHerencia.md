@@ -49,6 +49,18 @@ Tablet (Hereda de Computadora)
   └── printPeso() → imprime gramos y llama a super.printPeso() para los kg
 ```
 
+### Enum de Tipos de OS
+Crea una nueva clase de tipo enum llamada `tipoOS` y pegale esto:
+```java
+public enum tipoOS {
+	Windows,
+	Linux,
+	iOS,
+	Android
+}
+```
+
+
 ### Ejemplo de Salida Esperado
 ```
 Peso: 650.0 gramos
