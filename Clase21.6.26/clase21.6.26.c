@@ -11,14 +11,22 @@ int main(){
     char* st1 = "Hola mundo";
     char* st2 = "Hola";
 
-    strcat(destino, " ");
-    strcat(destino, fuente);
-    strcat(fuente, destino);
- 
-    printf("%s \n", destino);
-    printf("%s \n", fuente);
+    // Recepción de strings del usuario
+    // fgets(char* destino, int tamaño, stdin)
+    fgets(nombre, 20, stdin); // = A n t o n i o \n \0
 
-    /*
+    // Longitud del string deseado
+    // strlen(char* string);
+    longitud = strlen(nombre);
+
+    // Copia de un string a otro
+    // strcpy(char* destino, char* fuente);
+    strcpy(destino, nombre);
+
+    printf("%s %d \n", destino, longitud); 
+
+    // Comparación de st1 y st2 (0 = iguales, 1 = diferentes)
+    // strcmp(char* st1, char* st2, int numCharsComparados);
     comparacion = strncmp(st1, st2, strlen(st1));
 
     switch(comparacion){
@@ -28,15 +36,16 @@ int main(){
         default:     
             printf("No son iguales\n");
             break;
-    }        
+    } 
 
-    fgets(nombre, 20, stdin); // = A n t o n i o \n \0
-
-    longitud = strlen(nombre);
-    strcpy(destino, nombre);
-
-    printf("%s %d \n", destino, longitud); 
-    */
+    // Concatenación de st2 a st1
+    // strcat(char* st1, char* st2);
+    strcat(destino, " ");
+    strcat(destino, fuente);
+    strcat(fuente, destino);
+ 
+    printf("%s \n", destino);
+    printf("%s \n", fuente);       
 
     return 0;
 }
