@@ -6,7 +6,7 @@
 void solicitarFrase(char* st, int* num);
 
 int main(){
-    char st[MAX_FRASE] = NULL;
+    char st[MAX_FRASE] = "";
     char res[MAX_FRASE] = "";
     int numFrases = 0;
 
@@ -14,9 +14,9 @@ int main(){
     {
         solicitarFrase(st, &numFrases);
 
-        if(strlen(st) > strlen(res)) strcpy(res, st);
+        if(strcmp(st, "aaa") != 0 && strlen(st) > strlen(res)) strcpy(res, st);
     }
-    
+
     if(numFrases >= 2) printf("La frase mas larga es: %s", res);
 
     return 0;
@@ -27,7 +27,8 @@ void solicitarFrase(char* st, int* num){
 
     fgets(st, MAX_FRASE, stdin);
 
-    if(st[strlen(st) - 1] == '\n' && strlen(st) >= 0) st[strlen(st) - 1] = '\0';
+    size_t len = strlen(st);
+    if(len > 0 && st[len - 1] == '\n') st[len - 1] = '\0';
 
     if(strcmp(st, "aaa") != 0) (*num)++;
 }
