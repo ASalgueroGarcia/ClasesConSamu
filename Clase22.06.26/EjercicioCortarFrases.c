@@ -16,7 +16,7 @@ int main(){
     printf("Introduzca una posicion de corte: \n > ");
     scanf("%d", &posCorte);
 
-    if(posCorte > strlen(st) || posCorte <= 0) posCorte = strlen(st);
+    if(posCorte > strlen(st) || posCorte <= 0) posCorte = strlen(st) / 2;
 
     division = divideCadena(st, posCorte, parte1, parte2);
 
