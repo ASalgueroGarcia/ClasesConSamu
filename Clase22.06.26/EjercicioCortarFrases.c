@@ -9,14 +9,12 @@ int main(){
     char st[MAX_FRASE];
     char parte1[MAX_FRASE];
     char parte2[MAX_FRASE];
-    int posCorte = 0, division = 0;
+    int posCorte = 0, division = -1;
 
     printf("Introduzca una cadena para dividr: \n > ");
     fgets(st, MAX_FRASE, stdin);
     printf("Introduzca una posicion de corte: \n > ");
     scanf("%d", &posCorte);
-
-    if(posCorte > strlen(st) || posCorte <= 0) posCorte = strlen(st) / 2;
 
     division = divideCadena(st, posCorte, parte1, parte2);
 
@@ -33,10 +31,15 @@ int main(){
 
 int divideCadena(char* frase, int posCorte, char* parte1, char* parte2){
     int pos1 = 0, pos2 = 0;
+    int len = strlen(frase);
 
-    for (int i = 0; i < strlen(frase); i++)
+    if (frase == NULL || parte1 == NULL || parte2 == NULL) return -1;
+
+    if (posCorte < 0 || posCorte > len) return -1;
+
+    for (int i = 0; i < len; i++)
     {
-        if(i <= posCorte){
+        if(i < posCorte){
             parte1[pos1] = frase[i];
             pos1++;
         }
@@ -45,6 +48,9 @@ int divideCadena(char* frase, int posCorte, char* parte1, char* parte2){
             pos2++;
         }
     }
-    
-    return 0;
+
+    parte1[pos1] = '\0';
+    parte2[pos2] = '\0';
+
+    return 0; 
 }
